@@ -38,28 +38,27 @@ void	Phone_book::add()
 void	Phone_book::search()
 {
 	int	i = 0;
-	std::string	logo = "| Index | First name | Last name | Nickname |";
 
 	if (_id == 0)
 	{
 		std::cout << "Your phone book is empty (T∩T), add contact \\(!!˚☐˚)/" << std::endl;
 		return ;
 	}
-	std::cout << "x" << std::setfill('x') << std::setw(logo.length() - 1) << "x" << std::endl << std::setfill(' ');
-	std::cout << logo << std::endl;
-	std::cout << "x" << std::setfill('x') << std::setw(logo.length() - 1) << "x" << std::endl << std::setfill(' ');
+	std::cout << "x" << std::setfill('x') << std::setw(44) << "x" << std::endl << std::setfill(' ');
+	std::cout << "|" << std::setw(10) << "Index" << "|" << std::setw(10) << "First name" << "|" << std::setw(10)<< "Last name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
+	std::cout << "x" << std::setfill('x') << std::setw(44) << "x" << std::endl << std::setfill(' ');
 	while (i < _id && i < 8)
 	{
 		_contact[i].print_short(i);
 		i++;
 	}
-	std::cout << "x" << std::setfill('x') << std::setw(logo.length() - 1) << "x" << std::endl << std::setfill(' ');
+	std::cout << "x" << std::setfill('x') << std::setw(44) << "x" << std::endl << std::setfill(' ');
 	std::cout << std::endl << std::endl << "Write index for show contact or other to quit" << std::endl;
 
 	std::string buf;
 	std::cin >> buf;
 	if (buf.size() == 1 && buf[0] >= '1' && buf[0] <= '8' && buf[0] <= _id + '0')
-		_contact[i - 1].print_full();
+		_contact[(buf[0] - '0') - 1].print_full();
 }
 
 void	Phone_book::man()

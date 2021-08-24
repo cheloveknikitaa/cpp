@@ -50,20 +50,20 @@ void	Contact::print_full()
 
 void	Contact::print_short(int id)
 {
-	std::cout << "|" << id % 8 + 1 << std::setw(7) << "|";
-	if (_first_name.length() > 12)
-		std::cout << _first_name.substr(0, 10) << "." << std::setw(2);
+	std::cout << "|" << std::setw(10) << id % 8 + 1  << "|";
+	if (_first_name.length() > 10)
+		std::cout << _first_name.substr(0, 9) << ".";
 	else
-		std::cout << _first_name << std::setw(13 - (int)_first_name.length());
+		std::cout << std::setw(10) << _first_name;
 	std::cout << "|";
-	if (_last_name.length() > 11)
-		std::cout << _last_name.substr(0, 9) << "." << std::setw(2);
+	if (_last_name.length() > 10)
+		std::cout << _last_name.substr(0, 9) << ".";
 	else
-		std::cout << _last_name << std::setw(12 - (int)_last_name.length());
+		std::cout << std::setw(10) << _last_name;
 	std::cout << "|";
 	if (_nickname.length() > 10)
-		std::cout << _nickname.substr(0, 8) << "." << std::setw(2);
+		std::cout << _nickname.substr(0, 9) << ".";
 	else
-		std::cout << _nickname << std::setw(11 - (int)_nickname.length());
+		std::cout << std::setw(10) << _nickname;
 	std::cout << "|" << std::endl;
 }
