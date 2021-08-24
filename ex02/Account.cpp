@@ -1,7 +1,7 @@
+#include "Account.hpp"
 #include <iostream>
 #include <ctime>
 #include <iomanip>
-#include "Account.hpp"
 
 Account::Account( int initial_deposit )
 {
@@ -24,6 +24,7 @@ Account::Account( void )
 
 Account::~Account( void )
 {
+	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";"
 		<< "amount:" << _amount << ";"
 		<< "closed" << std::endl;
@@ -57,6 +58,7 @@ int		Account::checkAmount( void ) const
 
 void	Account::displayAccountsInfos( void )
 {
+	_displayTimestamp();
 	std::cout << "accounts:" << _nbAccounts << ";"
 		<< "total:" << _totalAmount << ";"
 		<< "deposits:" << _totalNbDeposits << ";"
@@ -104,6 +106,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 
 void	Account::displayStatus( void ) const
 {
+	_displayTimestamp();
 	std::cout << "index:" << _nbAccounts << ";"
 	<< "amount:" << _amount << ";"
 	<< "deposits:" << _nbDeposits << ";"
@@ -120,5 +123,5 @@ void	Account::_displayTimestamp( void )
 		<< std::setw(2) << now->tm_mday << "-"
 		<< std::setw(2) << now->tm_hour
 		<< std::setw(2) << now->tm_min
-		<< std::setw(2) << now->tm_sec << "]";
+		<< std::setw(2) << now->tm_sec << "] ";
 }

@@ -4,7 +4,7 @@ SRCS		=	Account.cpp tests.cpp
 
 HDRS		=	Account.hpp
 
-CPPFLAGS	=	-Wall -Wextra -Werror -I. -std=c++98
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
 CXX			=	clang++
 
