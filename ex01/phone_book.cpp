@@ -68,4 +68,3 @@ void	Phone_book::man()
 	std::cout << "\"SEARCH\" - show your phone book" << std::endl;
 	std::cout << "\"EXIT\" - closed your phone book and burned it" << std::endl << std::endl;
 }
-
