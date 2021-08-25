@@ -1,6 +1,6 @@
 NAME		=	account
 
-SRCS		=	Account.cpp tests.cpp
+SRCS		=	tests.cpp Account.cpp
 
 HDRS		=	Account.hpp
 
