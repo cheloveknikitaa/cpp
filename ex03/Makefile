@@ -35,4 +35,4 @@ run			:
 git			: ${SRCS} ${HDRS}
 				git add $^
 				git add Makefile
-				git commit -m cat
+				git commit -m \"
