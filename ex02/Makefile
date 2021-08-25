@@ -8,9 +8,9 @@ CXX			=	clang++
 
 OBJS		=	${SRCS:.cpp=.o}
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean fclean re run git
 
-all			:	${NAME}
+all			:	${NAME} run
 
 ${NAME}		:	${OBJS}
 				${CXX} ${CPPFLAGS} -o $@ $^
@@ -22,3 +22,10 @@ fclean		:	clean
 				rm -rf ${NAME}
 
 re			:	fclean all
+
+run			:
+				./${NAME}
+
+git			: ${SRCS}
+				git add $^
+				git add Makefile
