@@ -8,11 +8,13 @@ CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
 CXX			=	clang++
 
+COMMIT		=	.
+
 OBJS		=	${SRCS:.cpp=.o}
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean fclean re run git
 
-all			:	${NAME}
+all			:	${NAME} run
 
 ${OBJS}		:	${HDRS}
 
@@ -26,3 +28,11 @@ fclean		:	clean
 				rm -rf ${NAME}
 
 re			:	fclean all
+
+run			:
+				./${NAME}
+
+git			: ${SRCS} ${HDRS}
+				git add $^
+				git add Makefile
+				git commit -m "override $(COMMIT)"
