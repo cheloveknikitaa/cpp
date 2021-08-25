@@ -1,6 +1,8 @@
-NAME		=	brain
+NAME		=	club
 
-SRCS		=	main.cpp	Weapon.cpp	Weapon.hpp	HumanA.cpp	HumanA.hpp	HumanB.cpp	HumanB.hpp
+SRCS		=	main.cpp	Weapon.cpp	HumanA.cpp	HumanB.cpp
+
+HDRS		=	Weapon.hpp	HumanA.hpp	HumanB.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
@@ -11,6 +13,8 @@ OBJS		=	${SRCS:.cpp=.o}
 .PHONY		:	all clean fclean re
 
 all			:	${NAME}
+
+${OBJS}		:	${HDRS}
 
 ${NAME}		:	${OBJS}
 				${CXX} ${CPPFLAGS} -o $@ $^
