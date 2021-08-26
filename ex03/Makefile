@@ -8,8 +8,6 @@ CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
 CXX			=	clang++
 
-COMMIT		=	.
-
 OBJS		=	${SRCS:.cpp=.o}
 
 .PHONY		:	all clean fclean re run git
@@ -35,4 +33,3 @@ run			:
 git			: ${SRCS} ${HDRS}
 				git add $^
 				git add Makefile
-				git commit
