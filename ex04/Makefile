@@ -1,8 +1,8 @@
-NAME		=	zombieHorde
+NAME		=	replace
 
-SRCS		=	main.cpp	Zombie.cpp	ZombieHorde.cpp
+SRCS		=	main.cpp	Replace.cpp
 
-HDRS		=	Zombie.hpp
+HDRS		=	Replace.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
@@ -24,12 +24,14 @@ clean		:
 
 fclean		:	clean
 				rm -rf ${NAME}
+				rm -rf *.replace
 
 re			:	fclean all
 
 run			:
-				./${NAME}
+				./${NAME} Makefile N NN
+				./${NAME} Makefile.replace NN N
 
-git			:	${SRCS} ${HDRS}
+git			:	${SRCS}
 				git add $^
 				git add Makefile

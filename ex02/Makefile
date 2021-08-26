@@ -26,6 +26,6 @@ re			:	fclean all
 run			:
 				./${NAME}
 
-git			: ${SRCS}
+git			:	${SRCS}
 				git add $^
 				git add Makefile

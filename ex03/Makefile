@@ -30,6 +30,6 @@ re			:	fclean all
 run			:
 				./${NAME}
 
-git			: ${SRCS} ${HDRS}
+git			:	${SRCS} ${HDRS}
 				git add $^
 				git add Makefile
