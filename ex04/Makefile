@@ -32,6 +32,6 @@ run			:
 				./${NAME} Makefile N NN
 				./${NAME} Makefile.replace NN N
 
-git			:	${SRCS}
+git			:	${SRCS} ${HDRS}
 				git add $^
 				git add Makefile
