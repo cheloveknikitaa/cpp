@@ -48,4 +48,3 @@ void	MyReplace::MyReplace::replacing()
 	}
 	newFile << _buffer;
 }
-
