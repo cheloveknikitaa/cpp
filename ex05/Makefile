@@ -30,7 +30,6 @@ re			:	fclean all
 
 run			:
 				./${NAME} Makefile N NN
-				./${NAME} Makefile.replace NN N
 
 git			:	${SRCS} ${HDRS}
 				git add $^

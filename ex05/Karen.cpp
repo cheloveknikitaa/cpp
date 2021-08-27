@@ -26,22 +26,23 @@
 	void	Karen::complain(std::string	level)
 	{
 		int		i = 0;
-		char	*cases[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+		std::string	cases[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 		while (i < 4 && cases[i] != level)
+			i++;
 		switch (i)
 		{
 		case 0:
-			/* code */
+			(this->*func[0])();
 			break;
 		case 1:
-			/* code */
+			(this->*func[1])();
 			break;
 		case 2:
-			/* code */
+			(this->*func[2])();
 			break;
 		case 3:
-			/* code */
+			(this->*func[3])();
 			break;
 		
 		default:
@@ -52,6 +53,10 @@
 
 Karen::Karen()
 {
+	func[0] = &Karen::debug;
+	func[1] = &Karen::info;
+	func[2] = &Karen::warning;
+	func[3] = &Karen::error;
 }
 
 Karen::~Karen()

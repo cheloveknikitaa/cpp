@@ -1,6 +1,6 @@
 #include "Karen.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	Karen karen;
 

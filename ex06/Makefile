@@ -1,4 +1,4 @@
-NAME		=	karen
+NAME		=	karenFilter
 
 SRCS		=	main.cpp	Karen.cpp
 
@@ -10,9 +10,9 @@ CXX			=	clang++
 
 OBJS		=	${SRCS:.cpp=.o}
 
-.PHONY		:	all clean fclean re run git
+.PHONY		:	all clean fclean re git
 
-all			:	${NAME} run
+all			:	${NAME}
 
 ${OBJS}		:	${HDRS}
 
@@ -27,10 +27,6 @@ fclean		:	clean
 				rm -rf *.replace
 
 re			:	fclean all
-
-run			:
-				./${NAME} Makefile N NN
-				./${NAME} Makefile.replace NN N
 
 git			:	${SRCS} ${HDRS}
 				git add $^

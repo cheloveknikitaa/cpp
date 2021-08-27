@@ -10,6 +10,7 @@ private:
 	void	info();
 	void	warning();
 	void	error();
+	void	(Karen::*func[4])();
 public:
 	Karen();
 	~Karen();
