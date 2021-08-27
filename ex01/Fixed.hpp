@@ -22,4 +22,6 @@ public:
 	~Fixed();
 };
 
+std::ostream & operator<<(std::ostream & out, Fixed const & value);
+
 #endif
