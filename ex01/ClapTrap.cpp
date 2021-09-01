@@ -1,5 +1,14 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	this->_Name = "Noname";
+	this->_Hitpoints = 0;
+	this->_Energy_points = 0;
+	this->_Attack_damage = 0;
+	return ;
+}
+
 ClapTrap::ClapTrap(std::string Name)
 {
 	this->_Name = Name;
@@ -8,6 +17,20 @@ ClapTrap::ClapTrap(std::string Name)
 	this->_Attack_damage = 20;
 	std::cout << "ANNOUNCER : Ladies and gentlemen, please welcome to the terminal" << std::endl;
 	this->print_full();
+}
+
+ClapTrap::ClapTrap(const ClapTrap &raw)
+{
+	*this = raw;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &raw)
+{
+	this->_Name = raw.getName();
+	this->_Hitpoints = raw.getHp();
+	this->_Energy_points = raw.getEp();
+	this->_Attack_damage = raw.getAd();
+	return (*this);
 }
 
 ClapTrap::~ClapTrap()
@@ -57,12 +80,42 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		<< " Now he have " << this->_Hitpoints << " hitpoints." << std::endl;
 }
 
+std::string	ClapTrap::getName() const
+{
+	return (this->_Name);
+}
+
+unsigned int	ClapTrap::getHp() const
+{
+	return (this->_Hitpoints);
+}
+
+unsigned int	ClapTrap::getEp() const
+{
+	return (this->_Energy_points);
+}
+
 unsigned int	ClapTrap::getAd() const
 {
 	return (this->_Attack_damage);
 }
 
-std::string	ClapTrap::getName() const
+void	ClapTrap::setName(std::string Name)
 {
-	return (this->_Name);
+	this->_Name = Name;
+}
+
+void	ClapTrap::setHp(unsigned int Hitpoints)
+{
+	this->_Hitpoints = Hitpoints;
+}
+
+void	ClapTrap::setEp(unsigned int Energy_points)
+{
+	this->_Energy_points = Energy_points;
+}
+
+void	ClapTrap::setAd(unsigned int Attack_damage)
+{
+	this->_Attack_damage = Attack_damage;
 }

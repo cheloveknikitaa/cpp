@@ -4,9 +4,12 @@ int main()
 {
 	ClapTrap vasya("Vasya");
 	ClapTrap lesha("Lesha");
+	ClapTrap alexey;
 
+	alexey.print_full();
+	alexey = lesha;
 	vasya.attack("Lesha");
-	lesha.takeDamage(vasya.getAd());
+	alexey.takeDamage(vasya.getAd());
 	vasya.beRepaired(10);
-	lesha.attack("");
+	alexey.attack("");
 }

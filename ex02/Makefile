@@ -4,7 +4,7 @@ SRCS		=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp
 
 HDRS		=	ClapTrap.hpp	ScavTrap.hpp	FragTrap.hpp
 
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I. -Wshadow -Wno-shadow
 
 CXX			=	clang++
 

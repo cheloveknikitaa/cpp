@@ -4,11 +4,12 @@ int main()
 {
 	ScavTrap vasya("Vasya");
 	ScavTrap lesha("Lesha");
+	ScavTrap alesha(lesha);
 
 	vasya.attack("Lesha");
-	lesha.takeDamage(vasya.getAd());
+	alesha.takeDamage(vasya.getAd());
 	vasya.beRepaired(10);
-	lesha.attack("");
+	alesha.attack("");
 	vasya.guardGate();
-	lesha.guardGate();
+	alesha.guardGate();
 }
