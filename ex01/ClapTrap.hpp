@@ -18,6 +18,7 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	unsigned int	getAd() const;
+	std::string	getName() const;
 	~ClapTrap();
 };
 

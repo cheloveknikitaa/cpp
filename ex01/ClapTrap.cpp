@@ -3,9 +3,9 @@
 ClapTrap::ClapTrap(std::string Name)
 {
 	this->_Name = Name;
-	this->_Hitpoints = 10;
-	this->_Energy_points = 10;
-	this->_Attack_damage = 0;
+	this->_Hitpoints = 100;
+	this->_Energy_points = 50;
+	this->_Attack_damage = 20;
 	std::cout << "ANNOUNCER : Ladies and gentlemen, please welcome to the terminal" << std::endl;
 	this->print_full();
 }
@@ -60,4 +60,9 @@ void	ClapTrap::beRepaired(unsigned int amount)
 unsigned int	ClapTrap::getAd() const
 {
 	return (this->_Attack_damage);
+}
+
+std::string	ClapTrap::getName() const
+{
+	return (this->_Name);
 }
