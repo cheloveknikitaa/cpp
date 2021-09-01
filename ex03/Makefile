@@ -1,8 +1,8 @@
 NAME		=	a.out
 
-SRCS		=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp
+SRCS		=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp	DiamondTrap.cpp
 
-HDRS		=	ClapTrap.hpp	ScavTrap.hpp	FragTrap.hpp
+HDRS		=	ClapTrap.hpp	ScavTrap.hpp	FragTrap.hpp	DiamondTrap.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I. -Wshadow -Wno-shadow
 
