@@ -11,7 +11,7 @@ public:
 	WrongCat();
 	WrongCat(std::string	type);
 	WrongCat(const WrongCat &raw);
-	WrongCat &operator=(WrongCat const &raw);
+	WrongCat &operator=(const WrongCat &raw);
 	virtual	~WrongCat();
 	void	makeSound() const;
 };

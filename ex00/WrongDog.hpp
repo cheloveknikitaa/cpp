@@ -11,7 +11,7 @@ public:
 	WrongDog();
 	WrongDog(std::string	type);
 	WrongDog(const WrongDog &raw);
-	WrongDog &operator=(WrongDog const &raw);
+	WrongDog &operator=(const WrongDog &raw);
 	virtual	~WrongDog();
 	void	makeSound() const;
 };

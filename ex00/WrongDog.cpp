@@ -20,7 +20,7 @@ WrongDog::WrongDog(const WrongDog &raw)
 	*this = raw;
 }
 
-WrongDog &WrongDog::operator=(WrongDog const &raw)
+WrongDog &WrongDog::operator=(const WrongDog &raw)
 {
 	WrongAnimal::operator=(raw);
 	return (*this);

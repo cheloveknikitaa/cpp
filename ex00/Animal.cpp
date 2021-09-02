@@ -15,7 +15,7 @@ Animal::Animal(const Animal &raw)
 	*this = raw;
 }
 
-Animal &Animal::operator=(Animal const &raw)
+Animal &Animal::operator=(const Animal &raw)
 {
 	this->_type = raw._type;
 	return (*this);

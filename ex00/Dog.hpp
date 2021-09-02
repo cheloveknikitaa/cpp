@@ -11,7 +11,7 @@ public:
 	Dog();
 	Dog(std::string	type);
 	Dog(const Dog &raw);
-	Dog &operator=(Dog const &raw);
+	Dog &operator=(const Dog &raw);
 	virtual	~Dog();
 	void	makeSound() const;
 };

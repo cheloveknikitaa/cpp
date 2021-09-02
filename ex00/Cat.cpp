@@ -20,7 +20,7 @@ Cat::Cat(const Cat &raw)
 	*this = raw;
 }
 
-Cat &Cat::operator=(Cat const &raw)
+Cat &Cat::operator=(const Cat &raw)
 {
 	Animal::operator=(raw);
 	return (*this);

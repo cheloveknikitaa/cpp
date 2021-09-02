@@ -20,7 +20,7 @@ WrongCat::WrongCat(const WrongCat &raw)
 	*this = raw;
 }
 
-WrongCat &WrongCat::operator=(WrongCat const &raw)
+WrongCat &WrongCat::operator=(const WrongCat &raw)
 {
 	WrongAnimal::operator=(raw);
 	return (*this);
