@@ -32,8 +32,7 @@ Cat &Cat::operator=(const Cat &raw)
 	delete this->_brain;
 	if (raw._brain)
 	{
-		this->_brain = new Brain();
-		this->_brain = raw._brain;
+		this->_brain = new Brain(*raw._brain);
 	}
 	return (*this);
 }
