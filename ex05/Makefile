@@ -24,12 +24,11 @@ clean		:
 
 fclean		:	clean
 				rm -rf ${NAME}
-				rm -rf *.replace
 
 re			:	fclean all
 
 run			:
-				./${NAME} Makefile N NN
+				./${NAME}
 
 git			:	${SRCS} ${HDRS}
 				git add $^
