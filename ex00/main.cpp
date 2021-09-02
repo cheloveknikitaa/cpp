@@ -20,7 +20,7 @@ int main()
 	delete i;
 	delete j;
 
-	std::cout << "==========================================================================================" << std::endl;
+	std::cout << "===========================================================================================" << std::endl;
 	const WrongAnimal* Wrong_meta = new WrongAnimal();
 	const WrongAnimal* Wrong_j = new WrongDog();
 	const WrongAnimal* Wrong_i = new WrongCat();
