@@ -24,7 +24,7 @@ Brain &Brain::operator=(const Brain &raw)
 
 std::string *Brain::getIdeas()
 {
-	return (this->_ideas);
+	return (_ideas);
 }
 
 Brain::~Brain()

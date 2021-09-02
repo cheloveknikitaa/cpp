@@ -20,10 +20,11 @@ Dog::~Dog()
 
 Dog::Dog(const Dog &raw)
 {
+	std::cout << "Dog COPY constructor called " << std::endl;
 	*this = raw;
 }
 
-Dog &Dog::operator=(Dog const &raw)
+Dog &Dog::operator=(const Dog &raw)
 {
 	if (this == &raw)
 		return (*this);

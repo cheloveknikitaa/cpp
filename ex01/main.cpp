@@ -7,19 +7,23 @@ int main()
 {
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	const Animal* testCopy = i;
+
 	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
+	std::cout << "==========================================================================================" << std::endl;
+	Cat i("vasya");
+	Cat testCopy;
+	testCopy = i;
+	std::cout << i.getType() << " " << std::endl;
+	std::cout << &testCopy << " adrs brain = " << testCopy.getIdeas() << std::endl;
+	std::cout << &i << " adrs brain = " << i.getIdeas() << std::endl;
+	std::cout << "==========================================================================================" << std::endl;
+	testCopy.makeSound();
+	i.makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-	std::cout << "==========================================================================================" << std::endl;
-	std::cout << &testCopy << &testCopy. std::endl;
-	std::cout << &i << std::endl;
 
 	delete meta;
-	delete i;
 	delete j;
+
 
 }

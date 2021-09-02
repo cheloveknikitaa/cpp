@@ -20,10 +20,11 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &raw)
 {
+	std::cout << "Cat COPY constructor called " << std::endl;
 	*this = raw;
 }
 
-Cat &Cat::operator=(Cat const &raw)
+Cat &Cat::operator=(const Cat &raw)
 {
 	if (this == &raw)
 		return (*this);
