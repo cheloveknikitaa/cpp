@@ -16,7 +16,7 @@ private:
 public:
 	Form(std::string Name, int GradeToSignIt, int GradeToExecuteIt);
 	Form(const Form &raw);
-	~Form();
+	virtual ~Form() = 0;
 
 	const std::string	&getName() const;
 	int					getGradeToSignIt() const;
@@ -24,6 +24,7 @@ public:
 	bool				getIndicatingSigned() const;
 
 	void	beSigned(const Bureaucrat &person);
+	virtual void	execute(Bureaucrat const & executor) const;
 
 	class GradeTooLowException : public std::exception
 	{
@@ -38,6 +39,13 @@ public:
 		FormAlreadySignedException();
 		const char *what() const throw();
 		virtual ~FormAlreadySignedException() throw();
+	};
+	class FormNotSignedException : public std::exception
+	{
+	public:
+		FormNotSignedException();
+		const char *what() const throw();
+		virtual ~FormNotSignedException() throw();
 	};
 	class GradeTooHighException : public std::exception
 	{
