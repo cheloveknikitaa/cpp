@@ -1,8 +1,8 @@
 NAME		=	a.out
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp Base.cpp
 
-HDRS		=	
+HDRS		=	Base.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 

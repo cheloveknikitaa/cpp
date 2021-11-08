@@ -4,7 +4,7 @@ SRCS		=	main.cpp convert.cpp
 
 HDRS		=	convert.hpp
 
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I. -Wshadow -Wno-shadow
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
 CXX			=	clang++
 
