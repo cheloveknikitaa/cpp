@@ -10,25 +10,22 @@ private:
 	unsigned int _size_arr;
 	T *_arr;
 public:
-	Array()
-	{
-		_size_arr = 0;
-		_arr = NULL;
-	}
+	Array() : _size_arr(0), _arr(NULL) {}
 	Array(unsigned int n)
 	{
 		this->_arr = new T[n];
 		this->_size_arr = n;
 	}
-	Array(Array &raw)
+	Array(Array &raw) : _size_arr(0), _arr(NULL)
 	{
 		*this = raw;
 	}
 	Array &operator=(Array &raw)
 	{
-		if (*this == raw)
+		if (this->_arr == raw._arr)
 			return (*this);
-		delete[] this->_arr;
+		if (this->_arr != NULL)
+			delete[] this->_arr;
 		this->_arr = new T[raw._size_arr];
 		this->_size_arr = raw._size_arr;
 		for (unsigned int i = 0; i < this->_size_arr ; ++i)
@@ -48,6 +45,7 @@ public:
 	{
 		if (this->_arr)
 			delete[] this->_arr;
+		this->_arr = NULL;
 	}
 	unsigned int Size();
 };
