@@ -1,8 +1,8 @@
 NAME		=	a.out
 
-SRCS		=	main.cpp Span.cpp
+SRCS		=	main.cpp mutantstack.cpp
 
-HDRS		=	Span.hpp
+HDRS		=	mutantstack.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
