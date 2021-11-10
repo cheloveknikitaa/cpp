@@ -2,7 +2,7 @@ NAME		=	a.out
 
 SRCS		=	main.cpp
 
-HDRS		=	easyfind.hpp
+HDRS		=	Span.hpp
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I. -Wshadow -Wno-shadow
 
@@ -21,7 +21,7 @@ all			:	${NAME} run
 ${OBJS}		:	${HDRS}
 
 ${NAME}		:	${OBJS}
-				# ${CXX} ${CPPFLAGS} -o $@ $^
+				${CXX} ${CPPFLAGS} -o $@ $^
 				@echo "${Green}⡴⠑⡄${Black}⠀⠀⠀⠀⠀⠀⠀ ${Green}⣀⣀⣤⣤⣤⣀⡀"
 				@echo "⠸⡇⠀⠿⡀${Black}⠀⠀⠀${Green}⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀"
 				@echo "${Black}⠀⠀${Green}⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆"
