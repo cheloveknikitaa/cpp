@@ -1,4 +1,4 @@
-#include "Span.hpp"
+#include "span.hpp"
 
 Span::Span(unsigned int n) : _N(n), _vec()
 {
