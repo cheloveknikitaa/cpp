@@ -1,5 +1,4 @@
 #include "Span.hpp"
-#include <iostream>
 
 int main()
 {
@@ -35,5 +34,4 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
 }

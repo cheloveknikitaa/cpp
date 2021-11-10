@@ -1,10 +1,10 @@
 NAME		=	a.out
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp Span.cpp
 
 HDRS		=	Span.hpp
 
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I. -Wshadow -Wno-shadow
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I.
 
 CXX			=	clang++
 
